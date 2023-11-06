@@ -103,6 +103,10 @@ body {
   color: red;
 }
 
+.err-msg h3 {
+  display: inline;
+}
+
 .err-msg a {
   margin-left: 5px;
 }

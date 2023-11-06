@@ -1,9 +1,13 @@
+<form action="/shorten_url" class="url-form">
+  <input type="url" name="url" class="url-input" placeholder="Input URL Here" value="">
+  <button type="submit" class="url-button">Shorten</button>
+</form>
+
 <div class="input-container">
   <label for="short-url">Your URL:</label>
-  <input type="text" id="short-url" value="{{ shortURL }}">
-  <i class="fa-regular fa-copy"></i>
+  <input type="text" id="short-url" value="{{ shortURL }}" readonly="readonly/">
+  <i class="fa-regular fa-copy" id="copyBtn"></i>
 </div>
 
 
-{{!-- <P class="">Your URL: <input class="short-url" value=""></P> --}}
 

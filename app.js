@@ -1,7 +1,6 @@
 const express = require('express')
 const { engine } = require('express-handlebars')
 const fs = require('fs')
-const path = require('path')
 
 const app = express()
 const port = 3000
@@ -10,7 +9,7 @@ const dataFilePath = './data.json'
 
 let urlData = {}
 
-// 檢查data.json檔是否存在，若存在但為空回傳 {}
+// 檢查data.json檔是否存在，若存在但內容為空回傳 {}
 if (fs.existsSync(dataFilePath)) {
   try {
     const dataFileContent = fs.readFileSync(dataFilePath, 'utf8')
@@ -29,6 +28,7 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+// 生成短網址，並存入data.json
 app.get('/shorten_url', (req, res) => {
   const originalURL = req.query.url
   if (!originalURL.length) {
