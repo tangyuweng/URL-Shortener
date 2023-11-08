@@ -47,15 +47,15 @@ body {
   }
 
   25% {
-    transform: translateX(-5px);
+    transform: translateX(-2px);
   }
 
   50% {
-    transform: translateX(5px);
+    transform: translateX(2px);
   }
 
   75% {
-    transform: translateX(-5px);
+    transform: translateX(-2px);
   }
 
   100% {
@@ -64,7 +64,8 @@ body {
 }
 
 .url-button {
-  font-size: 16px;
+  overflow: hidden;
+  font-size: 1vw;
   margin-top: 10px;
   width: 20vw;
   height: 5vh;
@@ -75,6 +76,7 @@ body {
 }
 
 .url-button:active {
+  opacity: 1;
   animation: shake 0.5s;
 }
 
@@ -89,13 +91,21 @@ body {
   border-radius: 4px;
 }
 
-.fa-copy {
+#copyBtn {
+  width: 2vw;
+  height: 5vh;
   margin-left: 5px;
+  border: none;
+  background-color: #fff;
   cursor: pointer;
 }
 
-.fa-copy:active {
+#copyBtn:active {
   animation: shake 0.5s;
+}
+
+.fa-copy {
+  font-size: 1.5vw;
 }
 
 .err-msg {

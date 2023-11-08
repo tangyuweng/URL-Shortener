@@ -40,9 +40,10 @@ app.get('/shorten_url', (req, res) => {
     if (err) {
       console.error('Error writing to data.json:', err)
     }
+    const shortURL = `http://localhost:3000/${randomURL}`
+
+    res.render('index', { shortURL })
   })
-  const shortURL = `http://localhost:3000/${randomURL}`
-  res.render('index', { shortURL })
 })
 
 // 根據短網址重定向到相對應原始網址
